@@ -1,0 +1,17 @@
+server:
+  port: 7001
+  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/wanlichao/XH-ServerConfig
+          searchPaths:  config-repo
+          username: wanlc@91xunhui.com 
+          password: wan89001707
+      
+logging:
+  config: file:config/logback.xml
