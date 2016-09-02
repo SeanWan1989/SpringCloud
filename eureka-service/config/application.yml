@@ -1,0 +1,21 @@
+server:
+  port: 8761
+  
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://192.168.20.17:8762/eureka/
+      defaultZone: http://192.168.20.34:8761/eureka/
+  server:
+    evictionIntervalTimerInMs: 60000
+    peerEurekaNodesUpdateIntervalMs: 30000
+    peerEurekaStatusRefreshTimeIntervalMs: 40000
+    ResponseCacheAutoExpirationInSeconds: 60
+    ResponseCacheUpdateIntervalMs: 60000
+    enableSelfPreservation: false
+  instance:
+    hostname: localhost
+  
+logging:
+  config: file:config/logback.xml
+  

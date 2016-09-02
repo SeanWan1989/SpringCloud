@@ -1,0 +1,26 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: turbine
+    
+turbine:
+  appConfig: bookservice,bookservice1
+  aggregator:
+    clusterConfig: MAIN
+  clusterNameExpression: metadata['cluster']
+  
+  
+eureka:
+  client:
+    eurekaServiceUrlPollIntervalSeconds: 30
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://192.168.20.34:8761/eureka/,http://192.168.20.17:8762/eureka/
+    healthcheck:
+      enabled: true
+  
+
+logging:
+  config: file:config/logback.xml
