@@ -1,0 +1,20 @@
+server:
+  port: 2222
+
+eureka:
+  instance:
+    hostname: sean.com
+    metadataMap:
+      cluster: MAIN
+    leaseExpirationDurationInSeconds: 40
+    leaseRenewalIntervalInSeconds: 20
+  client:
+    eurekaServiceUrlPollIntervalSeconds: 30
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://192.168.20.34:8761/eureka/,http://192.168.20.17:8762/eureka/
+    healthcheck:
+      enabled: true
+      
+logging:
+  config: file:config/logback.xml
