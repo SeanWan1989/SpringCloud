@@ -11,7 +11,7 @@ spring:
           uri: https://git.oschina.net/wanlichao/XH-ServerConfig
           searchPaths:  config-repo
           username: wanlc@91xunhui.com 
-          password: wan89001707
+          password: password
       
 logging:
   config: file:config/logback.xml
